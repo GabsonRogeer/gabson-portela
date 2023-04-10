@@ -1,0 +1,70 @@
+h1{
+    margin: 0;
+}
+
+h3 {
+    margin: 0;
+}
+
+p {
+    line-height: 1.4;
+}
+
+button a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu__titulo {
+    text-decoration: none;
+}
+
+.projetos {
+    display: block;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.projetos__titulo {
+    font-size: 35px;
+    height: 100%;
+    width: 100%;
+}
+
+.projetos__lista {
+    display: block;
+}
+
+.projetos__item {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    row-gap: 10rem;
+    margin-top: 90px;
+}
+
+
+
+.projeto__titulo {
+    font-size: 30px;
+    height: 100%;
+    width: 100%;
+}
+
+.projeto__item {
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+    column-gap: 50px;
+    
+}
+
+.projeto__descricao {
+    line-height: 1.6em;
+    font-size: 16px;
+}
+
+.projeto__imagem {
+    border-radius: 0%;
+    width: 50%;
+}

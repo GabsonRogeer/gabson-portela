@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos</title>
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="./assets/styles/projetos.css">
+</head>
+<body>
+    <div class="main__content">
+        <header>
+            <div class="menu__titulo">
+                <h2 class="menu__titulo_">Gabson Portela</h2>
+                <p class="menu__sub_titulo">Desenvolvedor Back-End</p>
+            </div>
+            <nav>
+                <div class="menu__itens">
+                    <ul class="menu">
+                        <li class="menu__item"><a href="home.html">Home</a></li>
+                        <li class="menu__item"><a href="curriculo.html">Currículo</a></li>
+                        <li class="menu__item"><a href="#">Projetos</a></li>
+                        <li class="menu__item"><a href="contatos.html">Contatos</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main class="principal">
+            <section class="projetos">
+                <div class="projetos__titulo">
+                    <h1>Projetos</h1>
+                </div>
+                <div class="projetos__lista">
+                    <div class="projetos__item">
+                        <div class="projeto__item">
+                            <div class="projeto__titulo">
+                                <h3>MS Envio de E-Mail</h3>
+                                <span class="projeto__descricao">
+                                    <p>Microsserviço para envio de email com Spring (Java Mail Sender) e o servidor SMTP do Gmail.</p>
+                                    <p>Aplicação desenvolvida com Spring Boot na versão 3.0.2 ultilizando a Linguagem Java e a JDK 17
+                                        com um banco de dados PostgreSql</p>
+                                    <p>Aplicação rodando de forma assíncrona com RabbitMQ utlilizando protocolo AMQP</p>
+                                    <p>Link para o repositório no GitHub no botão abaixo.</p>
+                                    <button><a href="https://github.com/GabsonRogeer/ms-email" 
+                                        target="_blank">GitHub</button></a>
+                                </span>
+                            </div>
+                            <img src="./assets/img/microservisso.jpg" alt="" class="projeto__imagem">
+                        </div>
+                        <div class="projeto__item">
+                            <div class="projeto__titulo">
+                                <h3>API Gerenciamento de Pessoas</h3>
+                                <span class="projeto__descricao">
+                                    <p>Avaliação para uma vaga de emprego na empresa Attornatus, na qual eu precisei criar uma
+                                    API para gerenciar pessoas que permitisse;
+                                    </p>
+                                    <ul>
+                                        <li>Criar uma pessoa</li>
+                                        <li>Editar uma pessoa</li>
+                                        <li>Consultar uma pessoa</li>
+                                        <li>Listar pessoas</li>
+                                        <li>Criar endereço para pessoa</li>
+                                        <li>Listar endereços da pessoa</li>
+                                        <li>Poder informar qual endereço é o principal da pessoa</li>
+                                    </ul>
+                                    <p>Aplicação desenvolvida com Spring Boot na versão 3.0.1 ultilizando a Linguagem Java e a JDK 17
+                                    com um banco de dados simples (H2)
+                                    </p>
+                                    <p>Link para o repositório no GitHub e imagem em docker abaixo.</p>
+                                    <button><a href="https://hub.docker.com/r/gabsonroger/test-dev-back-end-jr-attornatus" 
+                                        target="_blank">Docker</button></a>
+                                    <button><a href="https://github.com/GabsonRogeer/Avaliacao-Back-End-Attornatus"
+                                        target="_blank">GitHub</button></a>
+                                </span>
+                            </div>
+                            <img src="./assets/img/microservisso.jpg" alt="" class="projeto__imagem">
+                        </div>
+                        <div class="projeto__item">
+                            <div class="projeto__titulo">
+                                <h3>Cloud Parking</h3>
+                                <span class="projeto__descricao">
+                                    <p>Projeto desenvolvido em conjunto com a DIO (Digital Innovation One) ao final do curso de 
+                                    Spring Framework ministrado pelo <a href="https://github.com/sandrogiacom">Sandro Giacomozzi</a>
+                                    no qual é possível controlar um estacionamento de veículos. Onde serão controlados a entrada,
+                                    saída e valor a ser cobrado do cliente.</p>
+                                    <p>As tecnologias ultilizadas no projeto foram;</p>
+                                    <ul>
+                                        <li>Java e Spring Boot</li>
+                                        <li>Spring Secutiry</li>
+                                        <li>PostgreSQL</li>
+                                        <li>Docker</li>
+                                        <li>Swagger</li>
+                                        <li>Rest-Assured</li>
+                                        <li>Heroku</li>
+                                    </ul>
+                                    <p>Link para o repositório no GitHub no botão abaixo.</p>
+                                    <button><a href="https://github.com/GabsonRogeer/cloud-parking" 
+                                        target="_blank">GitHub</button></a>
+                                </span>
+                            </div>
+                            <img src="./assets/img/microservisso.jpg" alt="" class="projeto__imagem">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    
+        <div class="div_footer"></div>
+        <footer class="rodape">
+            <div class="rodape__credito">
+                <p>Desenvolvido por Gabson Portela</p>
+            </div>
+            <div class="rodape__listas">
+                <ul class="rodape__lista">
+                    <li>gabsonrsp.dev@gmail.com</li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

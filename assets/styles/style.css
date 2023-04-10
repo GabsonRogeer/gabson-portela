@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;600&display=swap');
+* {
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+}
+
+:root {
+    /*cores*/
+    --amarelo: #FFC756;
+    --laranja: #F66139;
+    --lilas: #7F8FFE;
+    --verde: #56B78C;
+    --cinza-claro: #e4e4e4;
+    --cinza-escuro: #959595;
+
+    /* Fontes */
+
+    --font-titulo: 'Work Sans', sans-serif;
+
+}
+
+body {
+    font-family: var(--font-titulo);
+    height: 100vh;
+    background-color: var(--cinza-claro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__content {
+    width: 80%;
+}
+
+/* Estilos compartilhados */
+
+.menu__titulo_,
+.rodape__titulo {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.menu__titulo {
+    display: flex;
+    align-items: center;
+}
+
+.menu__sub_titulo {
+    margin-left: 8px;
+}
+
+img {
+    opacity: 1;
+    transition: 0.5s;
+    border-radius: 50%;
+}
+
+img:hover {
+    opacity: 0.9;
+}
+
+/* Header */
+
+header {
+    background-color: var(--cinza-claro);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.menu {
+    background-color: var(--cinza-claro);
+    font-size: 18px;
+    height: 100px;
+    padding: 0 1.5rem;
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+
+.menu__sub_titulo {
+    font-size: 18px;
+}
+
+.menu__item {
+    list-style-type: none;
+    font-weight: 300;
+}
+
+.menu__item a {
+    transition: .5s;
+    color: black;
+    text-decoration: none;
+}
+
+.menu__item a:hover {
+    color: var(--amarelo)
+}
+
+/* footer */
+
+.div_footer {
+    border: 1px solid rgb(199, 199 , 199);
+    transform-origin: center 0.5px;
+}
+
+.rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+
+/* .rodape__listas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+} */
+
+.rodape__lista {
+    list-style-type: none;
+    padding: 0;
+
+}
+
+.rodape__titulo{
+    align-items: center;
+}

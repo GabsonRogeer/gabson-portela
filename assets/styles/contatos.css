@@ -1,0 +1,48 @@
+/* Geral */
+
+* {
+    margin: 0;
+}
+
+header {
+    margin: 25px 0;
+}
+
+footer {
+    margin: 40px;
+}
+
+.rodape__credito {
+    margin-bottom: 30px;
+}
+
+/* Css Contatos */
+
+li {
+    list-style-type: none;
+}
+
+.contatos {
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 0px;
+}
+
+.contatos__titulo {
+    font-size: 35px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.lista {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contatos__lista {
+    margin-right: 150px;
+}
