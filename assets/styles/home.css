@@ -39,7 +39,6 @@ p {
 .perfil__titulo h1{
     margin-left: -5px;
     font-size: 100px;
-    line-height: 0%;
     width: auto;
     height: auto;
 }
@@ -54,4 +53,34 @@ p {
 
 .foto__principal {
     width: 35%;
+}
+
+@media screen and (max-width:720px) {
+    .perfil__titulo {
+        margin-bottom: 10px;
+    }
+    
+    .perfil__titulo h1 {
+        line-height: normal;
+        text-align: start;
+    }
+    .section__principal {
+        margin: auto;
+        display: block;
+        text-align: center;
+    }
+    
+    .foto__principal {
+        width: 70%;
+    }
+
+    .perfil__texto {
+        margin: auto;
+        display: block;
+        text-align: center;
+    }
+
+    .perfil__sub_titulo h3 {
+        text-align: start;
+    }
 }

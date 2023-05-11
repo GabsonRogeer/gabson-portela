@@ -46,3 +46,31 @@ li {
 .contatos__lista {
     margin-right: 150px;
 }
+
+@media screen and (max-width:720px) {
+    .contatos {
+        display: block;
+    }
+
+    .contatos__texto {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .contatos__lista {
+        margin: 0;
+        padding: 0;
+    }
+
+    .lista {
+        justify-content: center;
+        padding: 0;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width:1092px) {
+    .contatos__lista {
+        margin: 0;
+    }
+}
