@@ -1,9 +1,5 @@
 /* Principal */
 
-* {
-    margin: 0;
-    padding: 0;
-}
 p {
     text-align: justify;
     line-height: 1.4;
@@ -31,24 +27,13 @@ p {
 }
 
 .perfil__texto {
-    display: flex;
-    flex-direction: column;
     margin-left: 50px;
 }
 
 .perfil__titulo h1{
+    margin: 0;
     margin-left: -5px;
-    font-size: 100px;
-    width: auto;
-    height: auto;
-}
-
-.perfil__titulo {
-    margin-bottom: 80px;
-}
-
-.perfil__sub_titulo {
-    margin-bottom: -30px;
+    font-size: 50px;
 }
 
 .foto__principal {

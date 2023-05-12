@@ -20,7 +20,6 @@ h3 {
 .curriculo {
     display: block;
     margin-top: 70px;
-    margin-bottom: 70px;
 }
 
 .curriculo__categorias {
@@ -31,16 +30,6 @@ h3 {
     display: flex;
     flex-wrap: nowrap;
     align-items: start;
-    justify-content: space-between;
-    margin: 60px 0 50px 0;
-    /* column-gap: 100px; */
-}
-
-.categoria__curso {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: start;
-    column-gap: 123px;
     margin: 60px 0 50px 0;
 }
 
@@ -49,30 +38,29 @@ h3 {
     font-size: 20px;
 }
 
-.categoria__item {
+.descricao {
+    width: 50%;
+}
+
+.categoria__lista_curso {
+    width: 56%;
+}
+
+.data__curso{
+    display: flex;
+    align-items: start;
+}
+.categoria__item, .categoria__item_curso {
     display: flex;
     justify-content: end;
-    align-items:flex-start;
     margin-bottom: 20px;
     column-gap: 30px;
 }
 
-.categoria__item_curso {
+.categoria__curso {
     display: flex;
-    justify-content: start;
-    column-gap: 30%;
-
-    
-}
-
-.data__curso {
-    width: 62px;
-}
-
-
-
-.descricao {
-    width: 50%;
+    flex-wrap: nowrap;
+    margin: 60px 0 50px 0;
 }
 
 .categoria__skill {
@@ -84,10 +72,16 @@ h3 {
 
 .lista__skill {
     padding: 0;
+    overflow: hidden;
 }
 
+
 .skill__item {
-    padding: 3px;
+    padding: 3px 0;
+}
+
+.download {
+    margin-bottom: 20px;
 }
 
 @media screen and (max-width:720px) {
