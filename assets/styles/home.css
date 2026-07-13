@@ -1,10 +1,10 @@
-/* Principal */
+﻿/* Principal */
 p {
     text-align: justify;
-    line-height: 1.4;
+    line-height: 1.6;
 }
 
-.perfil__sub_titulo h3{
+.perfil__sub_titulo h3 {
     margin-bottom: 20px;
 }
 
@@ -13,58 +13,81 @@ p {
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
-
 }
 
 .section__principal {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 70px;
-    margin-bottom: 70px;
-    /* column-gap: 4rem; */
+    margin: 70px auto;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
 }
 
 .perfil__texto {
+    flex: 1 1 320px;
+    min-width: 280px;
     margin-left: 50px;
 }
 
-.perfil__titulo h1{
+.perfil__titulo h1 {
     margin: 0;
     margin-left: -5px;
-    font-size: 50px;
+    font-size: clamp(2.5rem, 5vw, 4rem);
 }
 
 .foto__principal {
-    width: 35%;
+    width: clamp(240px, 35%, 420px);
+    max-width: 100%;
+    height: auto;
+    flex: 0 1 320px;
 }
 
-@media screen and (max-width:720px) {
-    .perfil__titulo {
-        margin-bottom: 10px;
-    }
-    
-    .perfil__titulo h1 {
-        line-height: normal;
-        text-align: start;
-    }
+@media screen and (max-width:920px) {
     .section__principal {
-        margin: auto;
-        display: block;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
-    }
-    
-    .foto__principal {
-        width: 70%;
+        margin: 50px auto;
     }
 
     .perfil__texto {
-        margin: auto;
-        display: block;
+        margin: 0;
+        width: 100%;
         text-align: center;
     }
 
+    .foto__principal {
+        width: 70%;
+        margin-bottom: 1.5rem;
+    }
+
+    .perfil__titulo h1 {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width:560px) {
+    .main__content {
+        padding: 0 0.75rem;
+    }
+
+    .perfil__texto {
+        width: 100%;
+        text-align: left;
+    }
+
+    .perfil__titulo h1 {
+        font-size: 2.5rem;
+        text-align: left;
+    }
+
     .perfil__sub_titulo h3 {
-        text-align: start;
+        text-align: left;
+    }
+
+    .section__principal {
+        margin: 40px auto;
     }
 }

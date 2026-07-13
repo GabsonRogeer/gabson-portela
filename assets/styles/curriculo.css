@@ -1,6 +1,6 @@
 p {
     font-weight: 300;
-    margin: 10px 0 ;
+    margin: 10px 0;
 }
 
 h1 {
@@ -26,112 +26,217 @@ h3 {
     margin-top: 50px;
 }
 
-.categoria {
+.categoria,
+.categoria__curso {
     display: flex;
-    flex-wrap: nowrap;
-    align-items: start;
+    align-items: flex-start;
+    gap: 2rem;
     margin: 60px 0 50px 0;
+    width: 100%;
+    padding-bottom: 1.5rem;
 }
 
-.categoria__titulo {
-    width: 30%;
-    font-size: 20px;
-}
-
-.descricao {
-    width: 50%;
+.categoria__curso.collapsed .categoria__lista_curso {
+    max-height: 0;
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: hidden;
 }
 
 .categoria__lista_curso {
-    width: 56%;
+    flex: 1;
+    max-height: 2000px;
+    opacity: 1;
+    overflow: hidden;
+    transition: max-height 0.35s ease, opacity 0.35s ease, padding 0.25s ease;
 }
 
-.data__curso{
-    display: flex;
-    align-items: start;
-}
-.categoria__item, .categoria__item_curso {
-    display: flex;
-    justify-content: end;
-    margin-bottom: 20px;
-    column-gap: 30px;
+.categoria__curso.collapsed .expand-toggle {
+    background-color: var(--cinza-escuro);
 }
 
-.categoria__curso {
+.categoria__titulo {
     display: flex;
-    flex-wrap: nowrap;
-    margin: 60px 0 50px 0;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex: 0 0 260px;
+    max-width: 260px;
+    font-size: 20px;
+    line-height: 1.35;
+}
+
+.categoria__curso .categoria__titulo {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.75rem;
+}
+
+.expand-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: 1px solid transparent;
+    background-color: var(--lilas);
+    color: #fff;
+    padding: 0.85rem 1.25rem;
+    border-radius: 999px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.expand-toggle::before {
+    content: '+';
+    display: inline-block;
+    font-size: 1.1rem;
+    transform: translateY(-1px);
+    transition: transform 0.25s ease;
+}
+
+.categoria__curso:not(.collapsed) .expand-toggle::before {
+    content: '-';
+}
+
+.expand-toggle:hover {
+    background-color: var(--laranja);
+    border-color: rgba(255,255,255,0.6);
+}
+
+.categoria:last-child,
+.categoria__curso:last-child {
+    border-bottom: none;
+    margin-bottom: 40px;
+}
+
+.categoria__lista,
+.categoria__lista_curso {
+    flex: 1;
+}
+
+.categoria__item,
+.categoria__item_curso {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 30px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.data,
+.data__curso {
+    flex: 0 0 150px;
+    width: 120px;
+    min-width: 120px;
+    font-weight: 600;
+    color: #333;
+}
+
+.descricao {
+    flex: 1;
+    min-width: 180px;
+}
+
+.categoria__item h3,
+.titulo__skill h3 {
+    margin: 0 0 0.75rem;
 }
 
 .categoria__skill {
     margin-bottom: 30px;
     display: flex;
-    justify-content: space-evenly;
-    column-gap: 100px;
+    justify-content: space-between;
+    column-gap: 2rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.categoria__skill .skill__item {
+    padding: 6px 0;
 }
 
 .lista__skill {
     padding: 0;
-    overflow: hidden;
-}
-
-
-.skill__item {
-    padding: 3px 0;
+    margin: 0;
+    list-style: none;
 }
 
 .download {
-    margin-bottom: 20px;
+    margin: 40px 0 20px;
+    text-align: center;
 }
 
-@media screen and (max-width:720px) {
-    .categorias, .categoria,
-    .categoria__item, .curriculo{
+.download button {
+    background-color: var(--lilas);
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    padding: 0.85rem 1.5rem;
+    cursor: pointer;
+    transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.download button:hover {
+    background-color: var(--laranja);
+    transform: translateY(-1px);
+}
+
+@media screen and (max-width:920px) {
+    .categoria,
+    .categoria__curso {
         display: block;
     }
-    
-    .categorias {
-        margin: auto;
-        text-align: center;
+
+    .categoria__titulo,
+    .data__curso {
+        width: 100%;
+        max-width: none;
+        margin-bottom: 1rem;
     }
 
-    .categoria__titulo {
-        margin-bottom: 15px;
+    .categoria__item,
+    .categoria__item_curso {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
     }
 
-    .categoria__item {
-        text-align: justify;
-    }
-
-    .categoria__item h3 {
-        margin-top: 40px;
-        text-align: start;
-        margin: 0;
-    }
-
-    .curriculo {
-        margin: auto;
-        text-align: center;
-    }
-
-    .data {
-        margin: 5px 0
+    .data,
+    .data__curso {
+        width: auto;
+        flex: 1 1 auto;
     }
 
     .descricao {
-        width: auto;
-        margin-bottom: 30px;
-    }
-
-    
-    .categoria__curso, .categoria__item_curso{
-        display: block;
-        text-align: start;
+        width: 100%;
     }
 
     .categoria__skill {
         display: block;
-        text-align: justify;
+    }
+}
+
+@media screen and (max-width:560px) {
+    h1 {
+        font-size: clamp(2.5rem, 6vw, 3.5rem);
+        text-align: center;
+    }
+
+    .curriculo {
+        margin-top: 40px;
+    }
+
+    .categoria {
+        margin: 40px 0;
+    }
+
+    .categoria__skill {
         width: 100%;
     }
 }

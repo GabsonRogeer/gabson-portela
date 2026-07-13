@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,14 +13,18 @@
         <header>
             <div class="menu__titulo">
                 <h2 class="menu__titulo_">Gabson Portela</h2>
-                <p class="menu__sub_titulo">Desenvolvedor Back-End</p>
+                <p class="menu__sub_titulo">Coordenador de Operações</p>
             </div>
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <span class="bar"></span>
+            </button>
             <nav>
                 <div class="menu__itens">
                     <ul class="menu">
                         <li class="menu__item"><a href="home.html">Home</a></li>
                         <li class="menu__item"><a href="curriculo.html">Currículo</a></li>
-                        <li class="menu__item"><a href="#">Projetos</a></li>
+                        <li class="menu__item"><a href="projetos.html">Projetos</a></li>
+                        <li class="menu__item"><a href="cases.html">Cases de Sucesso</a></li>
                         <li class="menu__item"><a href="contatos.html">Contatos</a></li>
                     </ul>
                 </div>
@@ -37,7 +41,7 @@
                             <div class="projeto__titulo">
                                 <h3>MS Envio de E-Mail</h3>
                                 <span class="projeto__descricao">
-                                    <p>Microsserviço para envio de email com Spring (Java Mail Sender) e o servidor SMTP do Gmail.</p>
+                                    <p>Microserviços para envio de email com Spring (Java Mail Sender) e o servidor SMTP do Gmail.</p>
                                     <p>Aplicação desenvolvida com Spring Boot na versão 3.0.2 ultilizando a Linguagem Java e a JDK 17
                                         com um banco de dados PostgreSql</p>
                                     <p>Aplicação rodando de forma assíncrona com RabbitMQ utlilizando protocolo AMQP</p>
@@ -118,6 +122,7 @@
                 </ul>
             </div>
         </footer>
+        <script src="./assets/js/menu-toggle.js"></script>
     </div>
 </body>
 </html>
