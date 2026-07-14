@@ -1,76 +1,167 @@
-/* Geral */
+/* Contatos Page Styles */
 
-* {
-    margin: 0;
-}
-
-header {
-    margin: 25px 0;
-}
-
-footer {
-    margin: 40px;
-}
-
-.rodape__credito {
-    margin-bottom: 10px;
-}
-
-/* Css Contatos */
-
-li {
-    list-style-type: none;
-}
-
-.contatos {
-    display: flex;
-    justify-content: space-between;
-    margin: 80px 0px;
-}
-
-.contatos__titulo {
-    font-size: 35px;
+.contatos__section {
+    margin: 70px auto;
     width: 100%;
-    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.lista {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    column-gap: 2.5rem;
+.contatos__header {
+    text-align: center;
+    margin-bottom: 60px;
+    width: 100%;
+}
+
+.contatos__titulo h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin: 0;
+    color: var(--cinza-escuro);
     margin-bottom: 20px;
 }
 
-.contatos__lista {
-    margin-right: 150px;
+.contatos__subtitulo p {
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    color: var(--cinza-escuro);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 300;
 }
 
-@media screen and (max-width:720px) {
-    .contatos {
-        display: block;
+/* Redes Section */
+.contatos__redes {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    align-items: center;
+}
+
+.rede__grupo {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Contact Items */
+.rede__item {
+    display: inline-block;
+}
+
+.rede__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    padding: 25px 35px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+    min-width: 140px;
+}
+
+.rede__link:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    transform: translateY(-8px) scale(1.05);
+    border-color: var(--amarelo);
+}
+
+.rede__icon {
+    width: 48px;
+    height: 48px;
+    opacity: 1;
+    transition: all 0.3s ease;
+    filter: grayscale(0%);
+}
+
+.rede__link:hover .rede__icon {
+    opacity: 0.95;
+    filter: drop-shadow(0 4px 8px rgba(255, 199, 86, 0.3));
+}
+
+.rede__nome {
+    font-size: 0.95rem;
+    color: var(--cinza-escuro);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.rede__link:hover .rede__nome {
+    color: var(--laranja);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 920px) {
+    .contatos__section {
+        margin: 50px auto;
     }
 
-    .contatos__texto {
-        margin-bottom: 30px;
-        text-align: center;
+    .contatos__header {
+        margin-bottom: 50px;
     }
 
-    .contatos__lista {
-        margin: 0;
-        padding: 0;
+    .contatos__titulo h1 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
     }
 
-    .lista {
-        justify-content: center;
-        padding: 0;
-        margin-top: 20px;
+    .rede__grupo {
+        gap: 25px;
+    }
+
+    .rede__link {
+        padding: 20px 30px;
+        min-width: 130px;
+    }
+
+    .contatos__redes {
+        gap: 30px;
     }
 }
 
-@media screen and (max-width:1092px) {
-    .contatos__lista {
-        margin: 0;
+@media screen and (max-width: 560px) {
+    .main__content {
+        padding: 0 0.75rem;
+    }
+
+    .contatos__section {
+        margin: 40px auto;
+    }
+
+    .contatos__header {
+        margin-bottom: 40px;
+    }
+
+    .contatos__titulo h1 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    .contatos__subtitulo p {
+        font-size: 0.95rem;
+    }
+
+    .rede__grupo {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .rede__link {
+        width: 100%;
+        max-width: 250px;
+        padding: 20px 25px;
+    }
+
+    .contatos__redes {
+        gap: 20px;
     }
 }
