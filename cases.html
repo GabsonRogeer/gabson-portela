@@ -38,7 +38,8 @@
                 <div class="cases__container">
                     <article class="case__card">
                         <div class="case__header">
-                            <h2 class="case__titulo">Case de Sucesso | Transformação Operacional através da Redução do Tempo Médio de Atendimento (TMA)</h2>
+                            <h2 class="case__titulo">Redução do Tempo Médio de Atendimento (TMA)</h2>
+                            <p class="case__subtitulo">60% de redução no TMA da operação.</p>
                         </div>
                         <div class="case__content">
                             <section class="case__section-item">
@@ -53,7 +54,18 @@
                                 <p class="case__section-text">
                                     Iniciei um projeto piloto na equipe com o pior desempenho da operação, validando ações antes de expandi-las para os demais times.
                                 </p>
-                                <p class="case__section-subtitle">As principais iniciativas implementadas foram:</p>
+                                
+                            </section>
+
+                            <button class="case__expand-btn" aria-expanded="false">
+                                <span class="case__expand-text">Ver Resultados e Aprendizados</span>
+                                <span class="case__expand-icon">+</span>
+                            </button>
+
+                
+                            <div class="case__expandable">
+                                <section class="case__section-item">
+                                    <p class="case__section-subtitle">As principais iniciativas implementadas foram:</p>
                                 <ul class="case__bullets">
                                     <li>Estruturação de <strong>huddles diárias</strong> focadas na evolução do indicador e na remoção rápida de impedimentos.</li>
                                     <li>Desenvolvimento de um <strong>dashboard gerencial no Looker Studio</strong>, permitindo que supervisores acompanhassem seus indicadores em tempo real e direcionassem ações com base em dados.</li>
@@ -61,30 +73,28 @@
                                     <li>Implantação de um programa de <strong>reconhecimento por desempenho</strong>, com rankings diários, semanais e mensais para incentivar a melhoria contínua.</li>
                                     <li>Elaboração de <strong>materiais de apoio rápidos e padronizados</strong>, reduzindo o tempo gasto pelos agentes na busca por informações durante os atendimentos.</li>
                                 </ul>
-                            </section>
+                                    <h3 class="case__section-title">Resultados alcançados</h3>
+                                    <p class="case__section-text">
+                                        O projeto piloto apresentou resultados expressivos já no primeiro mês:
+                                    </p>
+                                    <ul class="case__bullets">
+                                        <li>Redução do TMA da equipe piloto de <strong>19 para 5 minutos</strong>, representando uma melhoria superior a <strong>70%</strong>.</li>
+                                        <li>Após a expansão da metodologia para toda a operação, foi alcançada uma <strong>redução superior a 60% no TMA geral</strong>.</li>
+                                        <li>Aumento significativo da produtividade da equipe.</li>
+                                        <li>Redução expressiva do backlog de atendimentos.</li>
+                                        <li>Maior agilidade na resposta aos clientes, refletindo positivamente na experiência do consumidor.</li>
+                                        <li>Fortalecimento da cultura de reconhecimento, elevando o engajamento e a motivação dos colaboradores.</li>
+                                        <li>Consolidação de uma gestão orientada por indicadores e tomada de decisão baseada em dados.</li>
+                                    </ul>
+                                </section>
 
-                            <section class="case__section-item">
-                                <h3 class="case__section-title">Resultados alcançados</h3>
-                                <p class="case__section-text">
-                                    O projeto piloto apresentou resultados expressivos já no primeiro mês:
-                                </p>
-                                <ul class="case__bullets">
-                                    <li>Redução do TMA da equipe piloto de <strong>19 para 5 minutos</strong>, representando uma melhoria superior a <strong>70%</strong>.</li>
-                                    <li>Após a expansão da metodologia para toda a operação, foi alcançada uma <strong>redução superior a 60% no TMA geral</strong>.</li>
-                                    <li>Aumento significativo da produtividade da equipe.</li>
-                                    <li>Redução expressiva do backlog de atendimentos.</li>
-                                    <li>Maior agilidade na resposta aos clientes, refletindo positivamente na experiência do consumidor.</li>
-                                    <li>Fortalecimento da cultura de reconhecimento, elevando o engajamento e a motivação dos colaboradores.</li>
-                                    <li>Consolidação de uma gestão orientada por indicadores e tomada de decisão baseada em dados.</li>
-                                </ul>
-                            </section>
-
-                            <section class="case__section-item">
-                                <h3 class="case__section-title">Aprendizado</h3>
-                                <p class="case__section-text">
-                                    Esse projeto demonstrou que resultados sustentáveis são consequência da combinação entre gestão visual, acompanhamento contínuo, reconhecimento das pessoas e melhoria dos processos. A validação em um projeto piloto antes da expansão permitiu reduzir riscos, acelerar a adoção das práticas e garantir consistência nos resultados alcançados.
-                                </p>
-                            </section>
+                                <section class="case__section-item">
+                                    <h3 class="case__section-title">Aprendizado</h3>
+                                    <p class="case__section-text">
+                                        Esse projeto demonstrou que resultados sustentáveis são consequência da combinação entre gestão visual, acompanhamento contínuo, reconhecimento das pessoas e melhoria dos processos. A validação em um projeto piloto antes da expansão permitiu reduzir riscos, acelerar a adoção das práticas e garantir consistência nos resultados alcançados.
+                                    </p>
+                                </section>
+                            </div>
                         </div>
                     </article>
 
@@ -141,6 +151,20 @@
             </div>
         </footer>
         <script src="./assets/js/menu-toggle.js"></script>
+        <script>
+            document.querySelectorAll('.case__expand-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const expandable = this.nextElementSibling;
+                    const isActive = expandable.classList.contains('active');
+                    
+                    expandable.classList.toggle('active');
+                    this.setAttribute('aria-expanded', !isActive);
+                    
+                    const text = this.querySelector('.case__expand-text');
+                    text.textContent = isActive ? 'Ver Resultados e Aprendizados' : 'Ocultar Resultados e Aprendizados';
+                });
+            });
+        </script>
     </div>
 </body>
 </html>

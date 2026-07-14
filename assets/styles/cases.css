@@ -136,6 +136,53 @@
     display: block;
 }
 
+/* Expandable Section Styles */
+.case__expand-btn {
+    background-color: var(--laranja);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+}
+
+.case__expand-btn:hover {
+    background-color: #d97a1f;
+    transform: translateX(4px);
+}
+
+.case__expand-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.case__expandable {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.case__expandable.active {
+    max-height: 2000px;
+}
+
+.case__expand-btn[aria-expanded="true"] .case__expand-icon {
+    transform: rotate(45deg);
+}
+
 /* Responsive Design */
 @media screen and (max-width: 920px) {
     .cases__section {
@@ -189,6 +236,12 @@
 
     .case__bullets li {
         font-size: 0.85rem;
+    }
+
+    .case__expand-btn {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+        margin: 15px 0;
     }
 
     .case__section-title {
